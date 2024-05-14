@@ -14,17 +14,17 @@
        <form name="form" id="form" action="game_form.php" method="POST">
             <div class="player">
                 <h1>First player</h1>
-                <input type="text" name="playerone" id="player1" required>
+                <input type="text" name="playerone" id="player1" placeholder="Enter your name here." required>
             </div>
 
             <div class="player">
                 <h1>Second player</h1>
-                <input type="text" name="playertwo" id="player2" required>
+                <input type="text" name="playertwo" id="player2" placeholder="Enter your name here." required>
             </div>
 
             <div class="player">
                 <h1>Third player</h1>
-                <input type="text" name="playerthree" id="player3" required>
+                <input type="text" name="playerthree" id="player3" placeholder="Enter your name here." required>
             </div>
 
             <div id="game_settings">

@@ -45,47 +45,52 @@
     <link href="https://fonts.cdnfonts.com/css/casino" rel="stylesheet">
     <title>Gambling Room</title>
 </head>
+
 <body onload="generate()">
-        <form name="obrazec" id="obrazec" method="post" autocomplete="off" action="<?php if($_SESSION["roundN"]==$_SESSION["roundNum"]){echo 'konc.php';}else{echo 'game_form.php';}?>">
-        <div id="header">
-                <h1>Dice Throw</h1>
-        </div>
-        <div id="wrapper">
-            <div class="playerg">
-                <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
-                    echo "<img src='img/dice".  $p1Roll[$x]. ".gif' alt='dice1' >";
-                }?></br></br></br>
-                <strong class="imena"><?php echo $_SESSION["p1"];  ?></strong></br>
-                <div class="number"><?php echo $_SESSION["p1Score"];  ?></div>
-            </div>
-            <div id="sredni" class="playerg">
-                <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
-                    echo "<img src='img/dice".  $p2Roll[$x]. ".gif' alt='dice1' >";
-                }
-                ?>
-                </br></br></br>
-
-                <strong class="imena"><?php echo $_SESSION["p2"];  ?></strong></br>
-                <div class="number"><?php echo $_SESSION["p2Score"];  ?></div>
-            </div>
-            <div class="playerg">
-                <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
-                    echo "<img src='img/dice".  $p3Roll[$x]. ".gif' alt='dice1'>";
-                }
-                ?>
-                </br></br></br>
-
-                <strong class="imena"><?php echo $_SESSION["p3"];  ?></strong></br>
-                <div class="number"><?php echo $_SESSION["p3Score"];  ?></div>
-            </div>
-            <div id="button" >
-                <input type="submit" id="button-roll" value="<?php if($_SESSION["roundN"]==$_SESSION["roundNum"]){echo 'Results';}else {echo 'Roll';}  ?>">
+    <div id="container2">
+    <form name="obrazec" id="obrazec" method="post" autocomplete="off" action="<?php if($_SESSION["roundN"]==$_SESSION["roundNum"]){echo 'konc.php';}else{echo 'game_form.php';}?>">
+            <div id="header">
+                    <h1>Dice Throw</h1>
             </div>
             <div id="round">
-                    Round: <?php echo $_SESSION["roundN"]  ?>
+                Round: <?php echo $_SESSION["roundN"]  ?>
             </div>
-        </div>
+            <div id="wrapper">
+                <div class="playerg">
+                    <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
+                        echo "<img src='img/dice".  $p1Roll[$x]. ".gif' alt='dice1' >";
+                    }?></br></br></br>
+                    <strong class="name"><?php echo $_SESSION["p1"];  ?></strong></br>
+                    <div class="number"><?php echo $_SESSION["p1Score"];  ?></div>
+                </div>
+
+                <div class="playerg">
+                    <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
+                        echo "<img src='img/dice".  $p2Roll[$x]. ".gif' alt='dice1' >";
+                    }
+                    ?>
+                    </br></br></br>
+
+                    <strong class="name"><?php echo $_SESSION["p2"];  ?></strong></br>
+                    <div class="number"><?php echo $_SESSION["p2Score"];  ?></div>
+                </div>
+                <div class="playerg">
+                    <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
+                        echo "<img src='img/dice".  $p3Roll[$x]. ".gif' alt='dice1'>";
+                    }
+                    ?>
+                    </br></br></br>
+
+                    <strong class="name"><?php echo $_SESSION["p3"];  ?></strong></br>
+                    <div class="number"><?php echo $_SESSION["p3Score"];  ?></div>
+                </div>
+                <div id="button" >
+                    <input type="submit" id="button-roll" value="<?php if($_SESSION["roundN"]==$_SESSION["roundNum"]){echo 'Results';}else {echo 'Roll';}  ?>">
+                </div>
+            </div>
 
         </form>
-	</body>
+    </div>
+</body>
+
 </html>
