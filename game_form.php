@@ -22,7 +22,7 @@
             array_push($p1Roll,rand(1,6));
             array_push($p2Roll,rand(1,6));
             array_push($p3Roll,rand(1,6));
-        }
+    }
     
     
     if($_SESSION["roundN"]<$_SESSION["roundNum"]){
@@ -33,7 +33,37 @@
         $_SESSION["p3Score"]+=$p3Roll[$x];
         }
     }
+
+    function diceAnim($playerRollArr, $playerIndex){
+        // Generate unique IDs for the dice animation and dice images containers
+        $animationId = 'dice-animation-' . $playerIndex;
+        $imagesId = 'dice-img-' . $playerIndex;
+    
+        echo "<div id='$animationId'>
+                <img src='img/dice-anim.gif' alt='Rolling dice animation'>
+              </div>";
+
+
+        echo "<audio id='dice-sound'>
+              <source src='dice_sound.mp3' type='audio/mpeg'>
+             </audio>";
         
+        echo "<script>
+                setTimeout(function() {
+                    document.getElementById('$animationId').style.display = 'none';
+                    var diceImages = document.querySelectorAll('#$imagesId');
+                    for (var i = 0; i < diceImages.length; i++) {
+                        diceImages[i].style.display = 'inline';
+                    }
+                    document.getElementById('dice-sound').play();
+                }, 1000);
+              </script>";
+        echo "<div id='$imagesId' style='display:none;'>";
+        for ($x = 0; $x < $_SESSION["diceNum"]; $x++) {
+            echo "<img src='img/dice" . $playerRollArr[$x] . ".gif' alt='dice$x'>";
+        }
+        echo "</div>";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -57,17 +87,16 @@
             </div>
             <div id="wrapper">
                 <div class="playerg">
-                    <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
-                        echo "<img src='img/dice".  $p1Roll[$x]. ".gif' alt='dice1' >";
-                    }?></br></br></br>
+                    <?php
+                        diceAnim($p1Roll, 1);
+                    ?></br></br></br>
                     <strong class="name"><?php echo $_SESSION["p1"];  ?></strong></br>
                     <div class="number"><?php echo $_SESSION["p1Score"];  ?></div>
                 </div>
 
                 <div class="playerg">
-                    <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
-                        echo "<img src='img/dice".  $p2Roll[$x]. ".gif' alt='dice1' >";
-                    }
+                    <?php  
+                        diceAnim($p2Roll, 2);
                     ?>
                     </br></br></br>
 
@@ -75,9 +104,8 @@
                     <div class="number"><?php echo $_SESSION["p2Score"];  ?></div>
                 </div>
                 <div class="playerg">
-                    <?php  for ($x = 0; $x <$_SESSION["diceNum"] ; $x++) {
-                        echo "<img src='img/dice".  $p3Roll[$x]. ".gif' alt='dice1'>";
-                    }
+                    <?php  
+                        diceAnim($p3Roll, 3);
                     ?>
                     </br></br></br>
 

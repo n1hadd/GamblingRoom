@@ -267,3 +267,10 @@ body::after {
     color: white;
     font-size: 50px;
 }
+
+#animationId{
+    height: 50px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
