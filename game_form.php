@@ -77,9 +77,9 @@
 </head>
 
 <body onload="generate()">
-    <div id="container2">
-    <form name="obrazec" id="obrazec" method="post" autocomplete="off" action="<?php if($_SESSION["roundN"]==$_SESSION["roundNum"]){echo 'konc.php';}else{echo 'game_form.php';}?>">
-            <div id="header">
+    <div class="container2">
+    <form name="obrazec" id="obrazec" method="post" autocomplete="off" action="<?php if($_SESSION["roundN"]==$_SESSION["roundNum"]){echo 'results.php';}else{echo 'game_form.php';}?>">
+            <div class="header">
                     <h1>Dice Throw</h1>
             </div>
             <div id="round">

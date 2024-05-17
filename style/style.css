@@ -147,7 +147,7 @@ body::after {
     border: none;
 }
 
-#container2 {
+.container2 {
     position: fixed;
     width: 945px;
     z-index: 3;
@@ -206,7 +206,7 @@ body::after {
     animation: neon-glow 1.5s infinite alternate;
 }
 
-#header {
+.header {
     margin: 100px auto 20px;
     align-items: center;
     justify-content: center;
@@ -262,7 +262,7 @@ body::after {
     }
 }
 
-#header h1 {
+.header h1 {
     font-family: 'Casino Flat', sans-serif;
     color: white;
     font-size: 50px;
@@ -273,4 +273,101 @@ body::after {
     position: absolute;
     margin: 0;
     padding: 0;
+}
+
+
+
+.containerRes {
+    position: fixed;
+    width: 945px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrapperRes {
+    margin: 0 auto;
+    width: 850px;
+    margin-top: 50px;
+}
+
+.pWinner {
+    margin: 5px;
+    width: 250px;
+    height: 400px;
+    padding: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(25, 0, 140, 0.5);
+    position: relative;
+}
+
+.pSecond {
+    margin: 5px;
+    width: 250px;
+    height: 350px;
+    padding: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(25, 0, 140, 0.5);
+    position: relative;
+}
+
+.pThird {
+    margin: 5px;
+    width: 250px;
+    height: 250px;
+    padding: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(25, 0, 140, 0.5);
+    position: relative;
+}
+
+.pWinner:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 5px;
+    /* Adjust the radius as needed */
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 255, 255, 0.5));
+    z-index: -1;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+.pSecond:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 5px;
+    /* Adjust the radius as needed */
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 255, 255, 0.5));
+    z-index: -1;
+    animation: neon-glow 1.5s infinite alternate;
+}
+.pThird:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 5px;
+    /* Adjust the radius as needed */
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 255, 255, 0.5));
+    z-index: -1;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+#containerFireWorks{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
 }
