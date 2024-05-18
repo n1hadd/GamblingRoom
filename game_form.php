@@ -73,6 +73,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.cdnfonts.com/css/casino" rel="stylesheet">
+    <link rel="icon" href="img/dice.png" type="img/x-icon">
     <title>Gambling Room</title>
 </head>
 
