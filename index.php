@@ -11,6 +11,9 @@
 </head>
 
 <body onload="generate()">
+            <div class="headerIndex">
+                <h1>Gambling Room</h1>
+            </div>
     <div id="container">
        <form name="form" id="form" action="game_form.php" method="POST">
             <div class="player">

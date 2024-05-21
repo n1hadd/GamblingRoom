@@ -23,6 +23,8 @@
             array_push($p2Roll,rand(1,6));
             array_push($p3Roll,rand(1,6));
     }
+
+    
     
     
     if($_SESSION["roundN"]<$_SESSION["roundNum"]){
@@ -84,14 +86,18 @@
                     <h1>Dice Throw</h1>
             </div>
             <div id="round">
-                Round: <?php echo $_SESSION["roundN"]  ?>
+                Round: <?php echo $_SESSION["roundN"]?> /<?php echo $_SESSION["roundNum"]?>
             </div>
             <div id="wrapper">
                 <div class="playerg">
                     <?php
                         diceAnim($p1Roll, 1);
                     ?></br></br></br>
-                    <strong class="name"><?php echo $_SESSION["p1"];  ?></strong></br>
+                    <h1 class="name">Name: </h1></br>
+                    <strong class="name"><?php echo $_SESSION["p1"];  ?></strong></br></br>
+                    <h1 class="name">Current: </h1></br></br>
+                    <div class="number"><?php echo array_sum($p1Roll)?></div></br></br>
+                    <h1 class="name">Sum: </h1></br></br>
                     <div class="number"><?php echo $_SESSION["p1Score"];  ?></div>
                 </div>
 
@@ -101,7 +107,11 @@
                     ?>
                     </br></br></br>
 
-                    <strong class="name"><?php echo $_SESSION["p2"];  ?></strong></br>
+                    <h1 class="name">Name: </h1></br>
+                    <strong class="name"><?php echo $_SESSION["p2"];  ?></strong></br></br>
+                    <h1 class="name">Current: </h1></br></br>
+                    <div class="number"><?php echo array_sum($p2Roll)?></div></br></br>
+                    <h1 class="name">Sum: </h1></br></br>
                     <div class="number"><?php echo $_SESSION["p2Score"];  ?></div>
                 </div>
                 <div class="playerg">
@@ -110,7 +120,11 @@
                     ?>
                     </br></br></br>
 
-                    <strong class="name"><?php echo $_SESSION["p3"];  ?></strong></br>
+                    <h1 class="name">Name: </h1></br>
+                    <strong class="name"><?php echo $_SESSION["p3"];  ?></strong></br></br>
+                    <h1 class="name">Current: </h1></br></br>
+                    <div class="number"><?php echo array_sum($p3Roll)?></div></br></br>
+                    <h1 class="name">Sum: </h1></br></br>
                     <div class="number"><?php echo $_SESSION["p3Score"];  ?></div>
                 </div>
                 <div id="button" >

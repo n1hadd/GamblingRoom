@@ -380,3 +380,18 @@ body::after {
     font-size: 25px;
     font-family: 'Casino Flat', sans-serif;
 }
+
+.headerIndex{
+    margin: 100px auto 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 100;
+}
+
+.headerIndex h1{
+    font-family: 'Casino Flat', sans-serif;
+    color: white;
+    font-size: 70px;
+    z-index: 100;
+}
